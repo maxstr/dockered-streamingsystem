@@ -4,7 +4,6 @@
 FROM    streamingsystem/precisebase
 # Includes any additional files we'd like accessable to our image
 ADD     sources /home/
-RUN     cp /home/keyboard /etc/default/keyboard
 RUN     apt-get update
 # Runtime + setup utilities
 RUN     apt-get -q -y install make 
@@ -32,10 +31,6 @@ RUN     apt-get install -y -q python-kiwi python-twisted.* ssl-cert
 # Grabbing streaming system
 RUN     git clone https://github.com/maxstr/streaming-system.git -b docker ~/streaming-system
 RUN     cd ~/streaming-system && git submodule init && git submodule update
-# Website setup
-RUN     touch ~/streaming-system/website/private/requirements.txt  
-RUN     cd ~/streaming-system/website && make install
-RUN     . ~/streaming-system/website/bin/activate && cd ~/streaming-system/website && (yes no | python manage.py syncdb)
 # Core flumotion and ugly plugin config
 RUN     cd ~/streaming-system/tools/flumotion && git clean -f -x && ./autogen.sh && make -j16 && make install
 RUN     cd ~/streaming-system/tools/flumotion-ugly && git clean -f -x && ./autogen.sh && make -j16 && make install

@@ -1,0 +1,56 @@
+{
+    "connection_details": {
+        "password": "",
+        "port": "22",
+        "user": ""
+    },
+    "host": "192.168.59.103",
+    "services": [
+        {
+            "conf": {
+                "channel": "#pycon-ab",
+                "flumotion-collector": "192.168.59.103",
+                "flumotion-encoder": "192.168.59.103",
+                "flumotion-encoder-port": 49152,
+                "flumotion-mixer": "192.168.59.103",
+                "flumotion-password": "password",
+                "flumotion-password-crypt": "12CsGd8FRcMSM",
+                "flumotion-salt": "12345",
+                "flumotion-user": "username",
+                "group": "bc",
+                "irclog": "http://logs.timvideos.us/%23pycon-ab/preview.log.html",
+                "justintv_key": false,
+                "justintv_user": false,
+                "link": "https://us.pycon.org/2012/schedule/",
+                "logo": "/static/logo/pycon.png",
+                "preview": "http://preview.timvideos.us/%23pycon-ab/latest.png",
+                "title": "Grand Ballroom AB",
+                "twitter": "@pycon OR #pycon OR #pyconus"
+            },
+            "type": "flumotion-encoder"
+        },
+        {
+            "conf": {
+                "channel": "#pycon-ab",
+                "flumotion-collector": "192.168.59.103",
+                "flumotion-encoder": "192.168.59.103",
+                "flumotion-encoder-port": 49152,
+                "flumotion-mixer": "192.168.59.103",
+                "flumotion-password": "password",
+                "flumotion-password-crypt": "12CsGd8FRcMSM",
+                "flumotion-salt": "12345",
+                "flumotion-user": "username",
+                "group": "bc",
+                "irclog": "http://logs.timvideos.us/%23pycon-ab/preview.log.html",
+                "justintv_key": false,
+                "justintv_user": false,
+                "link": "https://us.pycon.org/2012/schedule/",
+                "logo": "/static/logo/pycon.png",
+                "preview": "http://preview.timvideos.us/%23pycon-ab/latest.png",
+                "title": "Grand Ballroom AB",
+                "twitter": "@pycon OR #pycon OR #pyconus"
+            },
+            "type": "flumotion-collector"
+        }
+    ]
+}
